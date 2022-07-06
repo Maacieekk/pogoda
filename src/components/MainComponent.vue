@@ -35,7 +35,7 @@ export default {
       fetch(
         'https://api.openweathermap.org/geo/1.0/direct?q=' +
           this.localeInfo +
-          '&appid=04d03c358e8933ac6823da54c340c97b'
+          '&appid=04d03c358e8933ac6823da54c340c97b&units=metric'
       )
         .then((dt) => dt.json())
         .then((dt) => {
