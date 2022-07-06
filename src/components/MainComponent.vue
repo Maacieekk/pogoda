@@ -1,6 +1,7 @@
 <template>
   <header>
   <h1>WeatherApp</h1>
+
 <DIV class="form">
   <input type="text" placeholder="Wpisz lokalizację" v-model="localeInfo" />
   <button @click="getLatLon">szukaj</button>
@@ -38,7 +39,7 @@ export default {
       fetch(
         'https://api.openweathermap.org/geo/1.0/direct?q=' +
           this.localeInfo +
-          '&appid=04d03c358e8933ac6823da54c340c97b&units=metric'
+          '&appid=04d03c358e8933ac6823da54c340c97b'
       )
         .then((dt) => dt.json())
         .then((dt) => {
@@ -51,7 +52,7 @@ export default {
           lat +
           '&lon=' +
           lon +
-          '&appid=04d03c358e8933ac6823da54c340c97b'
+          '&appid=04d03c358e8933ac6823da54c340c97b&units=metric'
       )
         .then((dt) => dt.json())
         .then((dt) => {
@@ -90,6 +91,13 @@ box-shadow: 0px 2px 32px -7px rgba(17, 33, 193, 1);
   color: red;
   margin: 0;
 }
+
+}
+.weatherDays{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+
 }
 }
 

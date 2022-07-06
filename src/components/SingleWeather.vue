@@ -31,6 +31,7 @@ h3{margin:0;
 border-radius:1rem 1rem 0 0;
 color:#ffffff;
 background-color:#213547;
+padding: .5rem;
 }
 .temp{
 display:flex;
