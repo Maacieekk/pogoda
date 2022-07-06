@@ -13,7 +13,7 @@
 <img :src="'http://openweathermap.org/img/wn/'+values.weather[0].icon+'@2x.png'" alt="zdjecie">
  </div>
   </div>
-  {{values}}
+ 
 </template>
 <script>
 export default {
@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .single {
   border: 2px dashed red;
 }
