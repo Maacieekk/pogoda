@@ -1,8 +1,8 @@
 <template>
   <div v-if="Object.keys(values).length == 0" class="loading">loading...</div>
-  <div v-else>
+  <div v-else class="CityDetails">
     <h2>{{ values.name }}</h2>
-    <img
+    <img class="flag"
       :src="'https://countryflagsapi.com/svg/' + values.country"
       alt="COUNTRY FLAG"
     />
@@ -30,8 +30,26 @@ export default {
 };
 </script>
 
-<style>
-img {
+<style lang="scss">
+.flag {
   max-width: 30vw;
+  -webkit-box-shadow: 16px 8px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 16px 8px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 16px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+.CityDetails
+ {
+   -webkit-box-shadow: 16px 8px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 16px 8px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 16px 8px 24px 0px rgba(66, 68, 90, 1);
+  
+  justify-content: center;
+  align-items: center;
+  header {
+    display: flex;
+    h2 {
+      margin: 0;
+    }
+  }
 }
 </style>
